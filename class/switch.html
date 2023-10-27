@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>Switch case</title>
+  </head>
+  <body>
+    <script>
+      var n, choice;
+
+      function factors() {
+        for (var i = 1; i <= n; i++) if (n % i === 0) document.write(i + " ");
+      }
+
+      function armstrong(x) {
+        var sum = 0;
+        while (x != 0) {
+          var a = x % 10;
+          sum += a * a * a;
+          x = Math.floor(x / 10);
+        }
+        if (sum === n) document.write("Armstrong");
+        else document.write("Not Armstrong");
+      }
+
+      function factorial() {
+        var f = 1;
+        while (n > 0) {
+          f *= n;
+          n--;
+        }
+        document.write("factorial: " + f);
+      }
+
+      function isPalindrome() {
+        var s = n.toString();
+        if (s === s.split().reverse().join())
+          document.write(n + " is a palindrome");
+        else documet.write(n + " is not a palindrome");
+      }
+
+      n = parseInt(prompt("Enter a number: "));
+      choice = parseInt(
+        prompt("1.Factors 2.isArmstrong 3.factorial 4.isPalindrome")
+      );
+
+      switch (choice) {
+        case 1:
+          factors();
+          break;
+        case 2:
+          armstrong(n);
+          break;
+        case 3:
+          factorial();
+          break;
+        case 4:
+          isPalindrome();
+          break;
+        default:
+          alert("Please enter a number");
+      }
+    </script>
+  </body>
+</html>

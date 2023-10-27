@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>RGB</title>
+    <script>
+      function operation(color) {
+        document.body.style.backgroundColor = color;
+      }
+    </script>
+  </head>
+  <body>
+    <table align="center">
+      <tr>
+        <td><input type="button" value="red" onclick="operation('red')" /></td>
+        <td>
+          <input type="button" value="green" onclick="operation('green')" />
+        </td>
+        <td>
+          <input type="button" value="blue" onclick="operation('blue')" />
+        </td>
+      </tr>
+    </table>
+  </body>
+</html>

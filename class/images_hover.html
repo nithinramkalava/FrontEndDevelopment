@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+        }
+
+        .image-container img{
+            margin: 20px;
+            width: 100px;
+            height: 100px;
+            transition: all 0.35s;
+        }
+
+    </style>
+</head>
+<body>
+    <div class="image-container">
+        <img src="./img/image1.jpg" alt="Image 1" onmouseover="enlargeImage(this)" onmouseout="resetImage(this)">
+    </div>
+    <div class="image-container">
+        <img src="./img/image2.jpg" alt="Image 2" onmouseover="enlargeImage(this)" onmouseout="resetImage(this)">
+    </div>
+    <div class="image-container">
+        <img src="./img/image3.jpg" alt="Image 3" onmouseover="enlargeImage(this)" onmouseout="resetImage(this)">
+    </div>
+
+    <script>
+        function enlargeImage(img) {
+            img.style.width = '500px';
+            img.style.height = '500px';
+        }
+
+        function resetImage(img) {
+            img.style.width = '100px';
+            img.style.height = '100px';
+        }
+    </script>
+</body>
+</html>

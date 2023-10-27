@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Event bubling</title>
+
+    <style>
+        #outer, #middle, #inner, #button{
+            margin: 10px;
+            padding: 20px;
+            border: 1px solid black;
+        }
+    </style>
+
+</head>
+<body>
+    <div id="outer">
+        <div id="middle">
+            <div id="inner">
+                <button id="button">button</button>
+            </div>
+        </div>
+    </div>
+
+    <script>
+
+        const outer = document.getElementById("outer");
+        const middle = document.getElementById("middle");
+        const inner = document.getElementById("inner");
+        const button = document.getElementById("button");
+
+        outer.addEventListener("click", (event) => {
+            console.log("clicked on outer div");
+            console.log(event.target);
+        })
+
+        middle.addEventListener("click", (event) => {
+            console.log("clicked on middle div");
+            console.log(event.target);
+        })
+
+        inner.addEventListener("click", (event) => {
+            console.log("clicked on inner div");
+            console.log(event.target);
+        })
+
+        button.addEventListener("click", (event) => {
+            console.log("clicked on button div");
+            console.log(event.target);
+        })
+
+    </script>
+</body>
+</html>
